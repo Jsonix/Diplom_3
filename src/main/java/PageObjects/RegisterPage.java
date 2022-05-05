@@ -2,10 +2,18 @@ package PageObjects;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class RegisterPage {
+
+    public static String url = "https://stellarburgers.nomoreparties.site";
+
+    public static String name = RandomStringUtils.randomAlphabetic(10);
+    public static String email = RandomStringUtils.randomAlphabetic(10) + "@yandex.ru";
+    public static String password = RandomStringUtils.randomAlphabetic(10);
+    public static String shortPassword = RandomStringUtils.randomAlphabetic(5);
 
     //Поля
 

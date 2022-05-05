@@ -1,25 +1,17 @@
 import PageObjects.*;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
+import static PageObjects.LoginPage.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class LoginTest {
 
-    String url = "https://stellarburgers.nomoreparties.site";
-    String urlRegistration = "https://stellarburgers.nomoreparties.site/register";
-    String urlLogin = "https://stellarburgers.nomoreparties.site/login";
-
-    String name = RandomStringUtils.randomAlphabetic(10);
-    String email = RandomStringUtils.randomAlphabetic(10) + "@yandex.ru";
-    String password = RandomStringUtils.randomAlphabetic(10);
-
-    @Before
-    public void setUp(){
+    @BeforeClass
+    public static void setUp(){
         Configuration.startMaximized = true;
 
         MainPage mainPage = open(urlRegistration, MainPage.class);

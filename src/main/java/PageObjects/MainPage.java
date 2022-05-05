@@ -8,6 +8,8 @@ import static com.codeborne.selenide.Condition.*;
 
 public class MainPage {
 
+    public static String url = "https://stellarburgers.nomoreparties.site/";
+
     //Кнопка входа в аккаунт
     @FindBy(how = How.XPATH, using = ".//button[text()='Войти в аккаунт']")
     public SelenideElement loginButtonOnMainPage;
